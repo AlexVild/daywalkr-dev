@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  h1 { font-size: 2.5rem; text-align: center; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.15rem; }
+  
+  p {
+    line-height: 1.7;
+    margin: 1rem 0;
+  }
+
+  a {
+    color: #111;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+  a:hover { color: #000; }
+
+  hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 2rem 0;
+  }
+}
+
+/* Layout */
+main, section {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem 0;
+  padding: 0 1.5rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image components */
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 100%;
+}
+
+.img-container img {
+  max-height: 20rem;
+  max-width: 100%;
+  aspect-ratio: 1.6 / 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.img-container img:hover {
+  opacity: 0.85;
+}
+
+.img-caption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: #374151;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.85;
+}
