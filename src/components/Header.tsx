@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BlueskyIcon, BlueskyShareButton } from "react-share";
 
 export default function Header() {
   return (
@@ -9,11 +10,23 @@ export default function Header() {
           alt="Profile picture"
           className="size-40 rounded-full object-cover shadow-sm"
         />
-        <h1>daywalkr.dev</h1>
+        <div className="flex flex-row gap-4 items-center justify-center">
+          <h1>daywalkr.dev</h1>
+        </div>
         <nav className="flex items-center gap-4">
           <Link to="/">Home</Link>
           <Link to="/archive">Archive</Link>
         </nav>
+        <div className="mt-4">
+          <a
+            href="https://bsky.app/profile/daywalkr.bsky.social"
+            className="hover:opacity-70 transition-opacity duration-200"
+            target="_blank"
+            rel="noopener"
+          >
+            <BlueskyIcon size={32} round />
+          </a>
+        </div>
       </div>
     </div>
   );
