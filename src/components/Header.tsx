@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BlueskyIcon, BlueskyShareButton } from "react-share";
+import { BlueskyIcon } from "react-share";
 
 export default function Header() {
   return (
