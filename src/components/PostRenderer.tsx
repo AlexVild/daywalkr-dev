@@ -29,12 +29,12 @@ export default function PostRenderer({ postId }: { postId: string }) {
   const markdownComponents = {
     h2: ({ node, ...props }: any) => <h2 className="text-center" {...props} />,
     img: ({ src, alt }: any) => (
-      <div className="img-container ">
+      <span className="img-container ">
         <a href={src} target="_blank" rel="noopener">
           <img src={src} alt={alt} />
         </a>
-        <div className="img-caption">{alt}</div>
-      </div>
+        <span className="img-caption">{alt}</span>
+      </span>
     ),
   };
 
