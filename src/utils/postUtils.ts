@@ -39,7 +39,6 @@ const discoverPostsFromGitHub = async (): Promise<string[]> => {
       .sort()
       .reverse(); // Newest first
 
-    console.log(`📝 Discovered ${postIds.length} posts from GitHub:`, postIds);
     return postIds.length > 0 ? postIds : FALLBACK_POSTS;
   } catch (error) {
     console.warn("Failed to discover posts from GitHub API:", error);
